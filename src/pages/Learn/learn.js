@@ -1,117 +1,82 @@
-import { useNavigate } from "react-router-dom";
+import { Form, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/navbar";
 import Button from "../../components/Button/button";
 import ovo from "../../assets/imagePGI.png";
+import recipes from "./recipes_list";
 import Popup from "../../components/Popup/popup";
 import logo from "../../assets/logo3.png"; // Using a different image for the tree nodes
 import React from "react";
 import "./learn.css";
 import { useState } from "react";
 
-// Recursive Tree Component (Horizontal Layout with Larger Nodes)
-const TreeNode = ({ node, x = 0, y = 0, parentX = null, parentY = null, img_node = logo, showPopup }) => {
-  const childXOffset = 300; // Increased space between levels
-  const childYOffset = 200; // Increased space between siblings
-
+const Node = ({ x, y, img_node = logo, onClick }) => {
   return (
-    <div>
-      {/* Render Connection Lines */}
-      {parentX !== null && parentY !== null && (
-        <svg
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            overflow: "visible",
-            zIndex: 1, // Ensure it's beneath the nodes but still visible
-          }}
-        >
-          <line
-            x1={parentX + 50} // Start point for the line (center of parent)
-            y1={parentY + 50}
-            x2={x + 50} // End point for the line (center of child)
-            y2={y + 50}
-            stroke="black"
-            strokeWidth="4"
-          />
-        </svg>
-      )}
-
-      {/* Render the current node (egg image with a frame) */}
-      <div
+    <div
+      style={{
+        position: "absolute",
+        left: x,
+        top: y,
+        width: "120px",
+        height: "120px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 5,
+      }}
+    >
+      <img
+        onClick={onClick}
+        src={img_node}
+        alt="Node"
         style={{
-          position: "absolute",
-          left: x,
-          top: y,
-          width: "120px", // Increased node width
-          height: "120px", // Increased node height
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          width: "100px",
+          height: "100px",
+          objectFit: "cover",
+          borderRadius: "15px",
+          border: "6px solid black",
+          cursor: "pointer",
         }}
-      >
-        <img
-          onClick={showPopup}  // Trigger the showPopup function
-          src={img_node}
-          alt="Egg"
-          style={{
-            width: "100px",
-            height: "100px",
-            objectFit: "cover",
-            borderRadius: "15px",
-            border: "6px solid black",
-            zIndex: 2,
-            cursor: "pointer",
-          }}
-        />
-      </div>
-
-      {/* Render child nodes recursively */}
-      {node.children &&
-        node.children.map((child, index) => (
-          <TreeNode
-            key={index}
-            node={child}
-            x={x + childXOffset} // Adjusting horizontal distance for children
-            y={
-              y +
-              index * childYOffset -
-              (node.children.length - 1) * (childYOffset / 2) // Adjusting vertical spread
-            }
-            parentX={x}
-            parentY={y}
-            showPopup={showPopup} // Pass showPopup down to the child
-          />
-        ))}
+      />
     </div>
   );
 };
 
-export default function Learn() {
-  const [isPopupVisible, setPopupVisible] = useState(false);  // UseState to control popup visibility
+const ConnectionLine = ({ x1, y1, x2, y2 }) => {
+  return (
+    <svg
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        overflow: "visible",
+        zIndex: 0,
+      }}
+    >
+      <line
+        x1={x1 + 50} // Adjust for node center
+        y1={y1 + 50}
+        x2={x2 + 50}
+        y2={y2 + 50}
+        stroke="black"
+        strokeWidth="4"
+      />
+    </svg>
+  );
+};
 
-  const showPopup = () => {
-    setPopupVisible(true);  // Set popup visibility to true
+
+export default function Learn() {
+  const [isPopupVisible, setPopupVisible] = useState(false);
+  const [rec, setRec] = useState(1);
+
+  const showPopup = (id) => {
+    const recipe = recipes.find((r) => r.id === id);
+    setRec(recipe);
+    setPopupVisible(true);
   };
 
   const hidePopup = () => {
     setPopupVisible(false);  // Set popup visibility to false
-  };
-
-  // Tree data for the egg tree
-  const treeData = {
-    children: [
-      {
-        children: [
-          { children: [
-            { children: [] },
-            { children: [] },
-          ] },
-          { children: [] },
-          { children: [] },
-        ],
-      },
-    ],
   };
 
   return (
@@ -119,18 +84,21 @@ export default function Learn() {
       <Navbar />
       <div className="homepage">
         {/* Render the Popup, passing visibility state and setter */}
-        <Popup isPopupVisible={isPopupVisible} setPopupVisible={setPopupVisible} hidePopup={hidePopup} />
+        <Popup isPopupVisible={isPopupVisible} setPopupVisible={setPopupVisible} hidePopup={hidePopup} recipe={rec} />
 
-        <div
-          style={{
-            position: "relative",
-            height: "800px",
-            width: "1200px",
-            margin: "50px auto",
-          }}
-        >
-          {/* Render the tree and pass the showPopup function to TreeNode */}
-          <TreeNode node={treeData} x={0} y={350} showPopup={showPopup} />
+        <h1 style={{display:"flex", justifyContent:"center", color:"#f84234"}}>Progride e aprende novas Receitas!</h1>
+
+        <div style={{ position: "relative", margin: "auto", marginTop:"0%", marginLeft:"15%", display:"flex", justifyContent:"center", alignSelf:"center"  }}>
+          <Node x={100} y={250} img_node={ovo} onClick={() => showPopup(1)} />
+          <Node x={400} y={250} img_node={logo} onClick={() => showPopup(2)} />
+          <Node x={800} y={50} img_node={logo} onClick={() => showPopup(3)} />
+          <Node x={800} y={250} img_node={logo} onClick={() => showPopup(4)} />
+          <Node x={800} y={450} img_node={logo} onClick={() => showPopup(5)} />
+
+          <ConnectionLine x1={100} y1={250} x2={500} y2={250} />
+          <ConnectionLine x1={400} y1={250} x2={800} y2={250} />
+          <ConnectionLine x1={400} y1={250} x2={800} y2={450} />
+          <ConnectionLine x1={400} y1={250} x2={800} y2={50} />
         </div>
       </div>
     </>

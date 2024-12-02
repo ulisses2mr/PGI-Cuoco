@@ -12,7 +12,7 @@ export default function Navbar() {
     <div>
       <nav className={"nav"}>
         
-        <div className="logo">
+        <div className="NAVlogo">
           <img src={logoText} alt={"Cuoco"} onClick={() => navigate("/home")} className="logoNav"/>
         </div>
 
