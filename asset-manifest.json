@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/PGI-cuoco/static/css/main.f8b40e9c.css",
-    "main.js": "/PGI-cuoco/static/js/main.a636cb72.js",
-    "static/js/453.47ee7e0e.chunk.js": "/PGI-cuoco/static/js/453.47ee7e0e.chunk.js",
-    "static/media/logo.png": "/PGI-cuoco/static/media/logo.02ba0705a443843d2cb9.png",
-    "static/media/logo3.png": "/PGI-cuoco/static/media/logo3.e521069921deb777ce92.png",
-    "static/media/Group(3).png": "/PGI-cuoco/static/media/Group(3).69b5b51ccf1abb7bf51b.png",
-    "index.html": "/PGI-cuoco/index.html",
-    "main.f8b40e9c.css.map": "/PGI-cuoco/static/css/main.f8b40e9c.css.map",
-    "main.a636cb72.js.map": "/PGI-cuoco/static/js/main.a636cb72.js.map",
-    "453.47ee7e0e.chunk.js.map": "/PGI-cuoco/static/js/453.47ee7e0e.chunk.js.map"
+    "main.css": "/PGI-Cuoco/static/css/main.f8b40e9c.css",
+    "main.js": "/PGI-Cuoco/static/js/main.689ee89d.js",
+    "static/js/453.47ee7e0e.chunk.js": "/PGI-Cuoco/static/js/453.47ee7e0e.chunk.js",
+    "static/media/logo.png": "/PGI-Cuoco/static/media/logo.02ba0705a443843d2cb9.png",
+    "static/media/logo3.png": "/PGI-Cuoco/static/media/logo3.e521069921deb777ce92.png",
+    "static/media/Group(3).png": "/PGI-Cuoco/static/media/Group(3).69b5b51ccf1abb7bf51b.png",
+    "index.html": "/PGI-Cuoco/index.html",
+    "main.f8b40e9c.css.map": "/PGI-Cuoco/static/css/main.f8b40e9c.css.map",
+    "main.689ee89d.js.map": "/PGI-Cuoco/static/js/main.689ee89d.js.map",
+    "453.47ee7e0e.chunk.js.map": "/PGI-Cuoco/static/js/453.47ee7e0e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f8b40e9c.css",
-    "static/js/main.a636cb72.js"
+    "static/js/main.689ee89d.js"
   ]
 }
