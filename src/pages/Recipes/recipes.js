@@ -11,6 +11,7 @@ export default function Recipes() {
     <>
       <div className="recipes">
         <Navbar></Navbar>
+        <h1>Display de Receitas como lista?</h1>
       </div>
     </>
   );

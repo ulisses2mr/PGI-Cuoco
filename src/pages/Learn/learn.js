@@ -3,6 +3,8 @@ import Navbar from "../../components/Navbar/navbar";
 import Button from "../../components/Button/button";
 import ovo from "../../assets/imagePGI.png";
 import recipes from "./recipes_list";
+import bife from "../../assets/Sem título.png"
+import rroz from "../../assets/rice_bowl.png"
 import Popup from "../../components/Popup/popup";
 import logo from "../../assets/logo3.png"; // Using a different image for the tree nodes
 import React from "react";
@@ -76,23 +78,22 @@ export default function Learn() {
   };
 
   const hidePopup = () => {
-    setPopupVisible(false);  // Set popup visibility to false
+    setPopupVisible(false);
   };
 
   return (
     <>
       <Navbar />
       <div className="homepage">
-        {/* Render the Popup, passing visibility state and setter */}
         <Popup isPopupVisible={isPopupVisible} setPopupVisible={setPopupVisible} hidePopup={hidePopup} recipe={rec} />
 
         <h1 style={{display:"flex", justifyContent:"center", color:"#f84234"}}>Progride e aprende novas Receitas!</h1>
 
         <div style={{ position: "relative", margin: "auto", marginTop:"0%", marginLeft:"15%", display:"flex", justifyContent:"center", alignSelf:"center"  }}>
           <Node x={100} y={250} img_node={ovo} onClick={() => showPopup(1)} />
-          <Node x={400} y={250} img_node={logo} onClick={() => showPopup(2)} />
+          <Node x={400} y={250} img_node={rroz} onClick={() => showPopup(2)} />
           <Node x={800} y={50} img_node={logo} onClick={() => showPopup(3)} />
-          <Node x={800} y={250} img_node={logo} onClick={() => showPopup(4)} />
+          <Node x={800} y={250} img_node={bife} onClick={() => showPopup(4)} />
           <Node x={800} y={450} img_node={logo} onClick={() => showPopup(5)} />
 
           <ConnectionLine x1={100} y1={250} x2={500} y2={250} />
