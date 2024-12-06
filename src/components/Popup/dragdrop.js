@@ -68,10 +68,6 @@ const DragAndDrop = () => {
       setCenterImageSrc(newCenterImage); // Update center image
       setDraggableImageSrc(''); // Update draggable image
     }
-    else{
-      console.log(centerRect)
-      console.log(draggableTop)
-    }
   };
 
   return (

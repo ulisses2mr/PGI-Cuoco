@@ -28,10 +28,10 @@ export default function Navbar() {
           </li>
 
           <li className={"link"}>
-            <Link to={"/"}>Social - WIP</Link>
+            <Link to={"/WIP"}>Social - WIP</Link>
           </li>
           <li className={"link"}>
-            <Link to={"/"}>Loja - WIP</Link>
+            <Link to={"/WIP"}>Loja - WIP</Link>
           </li>
 
           <Button click={() => navigate("/learn") } text={"Aprender"} ></Button>

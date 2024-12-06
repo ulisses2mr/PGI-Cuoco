@@ -1,0 +1,11 @@
+.cardGoof{
+    background-color:white;
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 40rem;
+    margin-bottom: 2%;
+}
+
+.cardGoof:hover{
+    cursor: pointer;
+}

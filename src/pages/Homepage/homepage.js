@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar/navbar";
 import Button from "../../components/Button2/button2";
+import Button2 from "../../components/Button/button";
 import logo  from "../../assets/logo.png";
 import i1 from "../../assets/lettuce.jpg";
 import i2 from "../../assets/bife.png";
@@ -41,21 +42,27 @@ export default function HomePage() {
         <div className="tDiv">
           <div style={{ display: "flex", justifyContent: "space-between"}}>
             <div style={{ flex: "1 1 30%", textAlign: "center", padding: "10px" }}>
-              <h4 style={{ fontSize: "40px", fontWeight: "bold", marginBottom: "10px" }}>Desafios diários</h4>
-              <img src={i2} alt="Step 1" style={{ maxWidth: "25rem", height: "auto", marginBottom: "10px" }} />
-              <p style={{ fontSize: "20px", lineHeight: "1.5" }}>Todas os dias descobre novas e deliciosas receitas para seres um melhor cozinheiro</p>
+              <h4 style={{ fontSize: "40px", fontWeight: "900", marginBottom: "10px" }}>Desafios Diários</h4>
+              <img src={i2} alt="Step 1" style={{ maxWidth: "25rem", height: "auto" }} />
+              <p style={{ fontSize: "22px", fontWeight: "600", textDecoration:"none"}}> 
+                Experimenta  novas receitas todos os dias 
+              </p>
             </div>
 
             <div style={{ flex: "1 1 30%", textAlign: "center", padding: "10px" }}>
-              <h4 style={{ fontSize: "40px", fontWeight: "bold", marginBottom: "10px" }}>D!</h4>
-              <img src={i3} alt="Step 2" style={{ maxWidth: "25rem", height: "auto", marginBottom: "10px" }} />
-              <p style={{ fontSize: "20px", lineHeight: "1.5" }}>Escolha !</p>
+              <h4 style={{ fontSize: "40px", fontWeight: "900", marginBottom: "10px" }}>Receitas Ùnicas</h4>
+              <img src={i3} alt="Step 2" style={{ maxWidth: "25rem", height: "auto"}} />
+              <p style={{ fontSize: "22px", fontWeight: "600" , textDecoration:"none"}}>
+                Prepara pratos ajustados às tuas necessidades
+              </p>
             </div>
 
             <div style={{ flex: "1 1 30%", textAlign: "center", padding: "10px" }}>
-              <h4 style={{ fontSize: "40px", fontWeight: "bold", marginBottom: "10px" }}>Partilha com amigos</h4>
-              <img src={i1} alt="Step 3" style={{ maxWidth: "25rem", height: "auto", marginBottom: "10px" }} />
-              <p style={{ fontSize: "20px", lineHeight: "1.5" }}>Exibe as tuas criações e experiências</p>
+              <h4 style={{ fontSize: "40px", fontWeight: "900", marginBottom: "10px" }}>Partilha com Amigos</h4>
+              <img src={i1} alt="Step 3" style={{ maxWidth: "25rem", height: "auto"}} />
+              <p style={{ fontSize: "22px", fontWeight: "600", textDecoration:"none" }}>
+                Exibe as tuas criações e experiências
+              </p>
             </div>
           </div>
         </div>
