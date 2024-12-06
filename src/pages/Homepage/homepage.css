@@ -31,30 +31,29 @@
 .sideImage{
     display: flex;
     flex-direction: column;
-    margin: auto;
     align-content: flex-start;
+    margin-right: -10%;
 }
 
 .logoImage{
-    width: 70%;
+    width: 60%;
     height: auto;
     margin-top: -5%;
     z-index: 5;
 }
-
-.sideInfo{
+.sideInfo {
     display: flex;
     flex-direction: column;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start; /* Align text and elements to the left */
+    justify-content: space-around;
     margin: auto;
     padding-left: 0rem;
-    padding-right: 5rem;
+    padding-right: 1rem;
+    margin-top:-2%;
 }
 
-.textInfo{
-    width: 30rem;
+.textInfo {
+    width: 45rem;
     height: auto;
     word-wrap: break-word;
     word-break: break-word;
@@ -62,4 +61,32 @@
     overflow-wrap: break-word;
     margin-bottom: 10%;
     border-radius: 5px;
+    font-size:20px;
+    font-weight: 600;
+}
+
+.textBig {
+    width: 47rem;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -0%; 
+}
+
+.tDiv{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: auto;
+    padding-bottom: 15rem;
+}
+
+.warn{
+    color: #FF5E5E;
+    font-weight: 800;
 }

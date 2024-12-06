@@ -27,6 +27,13 @@ export default function Navbar() {
             <Link to={"/disclaimer"}>Disclaimer</Link>
           </li>
 
+          <li className={"link"}>
+            <Link to={"/"}>Social - WIP</Link>
+          </li>
+          <li className={"link"}>
+            <Link to={"/"}>Loja - WIP</Link>
+          </li>
+
           <Button click={() => navigate("/learn") } text={"Aprender"} ></Button>
 
         </div>

@@ -11,7 +11,7 @@ import React from "react";
 import "./learn.css";
 import { useState } from "react";
 
-const Node = ({ x, y, img_node = logo, onClick }) => {
+const Node = ({ x, y, img_node = logo, onClick, blur = false }) => {
   return (
     <div
       style={{
@@ -23,7 +23,8 @@ const Node = ({ x, y, img_node = logo, onClick }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        zIndex: 5,
+        zIndex: 15,
+        filter: blur ? "blur(15px)" : "none",
       }}
     >
       <img
@@ -36,14 +37,14 @@ const Node = ({ x, y, img_node = logo, onClick }) => {
           objectFit: "cover",
           borderRadius: "15px",
           border: "6px solid black",
-          cursor: "pointer",
+          cursor: !blur ? "pointer" : 'cursor',
         }}
       />
     </div>
   );
 };
 
-const ConnectionLine = ({ x1, y1, x2, y2 }) => {
+const ConnectionLine = ({ x1, y1, x2, y2, blur = false }) => {
   return (
     <svg
       style={{
@@ -52,6 +53,7 @@ const ConnectionLine = ({ x1, y1, x2, y2 }) => {
         left: 0,
         overflow: "visible",
         zIndex: 0,
+        filter: blur ? "blur(15px)" : "none",
       }}
     >
       <line
@@ -87,19 +89,25 @@ export default function Learn() {
       <div className="homepage">
         <Popup isPopupVisible={isPopupVisible} setPopupVisible={setPopupVisible} hidePopup={hidePopup} recipe={rec} />
 
-        <h1 style={{display:"flex", justifyContent:"center", color:"#f84234"}}>Progride e aprende novas Receitas!</h1>
+        {/*<h1 style={{display:"flex", justifyContent:"center", color:"#f84234"}}>Progride e desbloqueia novas receitas!</h1>*/}
 
-        <div style={{ position: "relative", margin: "auto", marginTop:"0%", marginLeft:"15%", display:"flex", justifyContent:"center", alignSelf:"center"  }}>
+        <div style={{ position: "relative", margin: "auto", marginTop:"5%", marginLeft:"15%", display:"flex", justifyContent:"center", alignSelf:"center"  }}>
           <Node x={100} y={250} img_node={ovo} onClick={() => showPopup(1)} />
-          <Node x={400} y={250} img_node={rroz} onClick={() => showPopup(2)} />
-          <Node x={800} y={50} img_node={logo} onClick={() => showPopup(3)} />
-          <Node x={800} y={250} img_node={bife} onClick={() => showPopup(4)} />
-          <Node x={800} y={450} img_node={logo} onClick={() => showPopup(5)} />
+          <Node x={400} y={250} img_node={rroz} blur={true}/>
+          
+          
+          <Node x={800} y={50} img_node={logo} blur={true}/>
+          <Node x={800} y={250} img_node={bife} blur={true}/>
+          <Node x={800} y={450} img_node={logo} blur={true}/>
+          <ConnectionLine x1={400} y1={250} x2={800} y2={250} blur={true} />
+          <ConnectionLine x1={400} y1={250} x2={800} y2={450} blur={true}/>
+          <ConnectionLine x1={400} y1={250} x2={800} y2={50} blur={true}/>
+          
+          <ConnectionLine x1={1600} y1={250} x2={800} y2={250} blur={true} />
+          <ConnectionLine x1={1600} y1={450} x2={800} y2={450} blur={true}/>
+          <ConnectionLine x1={1600} y1={50} x2={800} y2={50} blur={true}/>
 
-          <ConnectionLine x1={100} y1={250} x2={500} y2={250} />
-          <ConnectionLine x1={400} y1={250} x2={800} y2={250} />
-          <ConnectionLine x1={400} y1={250} x2={800} y2={450} />
-          <ConnectionLine x1={400} y1={250} x2={800} y2={50} />
+          <ConnectionLine x1={100} y1={250} x2={400} y2={250} />          
         </div>
       </div>
     </>

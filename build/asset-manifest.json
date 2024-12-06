@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/PGI-Cuoco/static/css/main.4e06c427.css",
+    "main.js": "/PGI-Cuoco/static/js/main.64f8b0a0.js",
+    "static/js/453.47ee7e0e.chunk.js": "/PGI-Cuoco/static/js/453.47ee7e0e.chunk.js",
+    "static/media/lettuce.jpg": "/PGI-Cuoco/static/media/lettuce.79cbd8585738a3a9a295.jpg",
+    "static/media/logo.png": "/PGI-Cuoco/static/media/logo.02ba0705a443843d2cb9.png",
+    "static/media/logo3.png": "/PGI-Cuoco/static/media/logo3.e521069921deb777ce92.png",
+    "static/media/bife.png": "/PGI-Cuoco/static/media/bife.5d927a19263f715d4785.png",
+    "static/media/arrroz.png": "/PGI-Cuoco/static/media/arrroz.e9c5b94ececf0b2a9047.png",
+    "static/media/novo.png": "/PGI-Cuoco/static/media/novo.a042268ce28019edeeda.png",
+    "static/media/stoves.png": "/PGI-Cuoco/static/media/stoves.95579dc158bb41e3b951.png",
+    "static/media/estre.png": "/PGI-Cuoco/static/media/estre.f2654c569e2d0d8d175a.png",
+    "static/media/Group(3).png": "/PGI-Cuoco/static/media/Group(3).69b5b51ccf1abb7bf51b.png",
+    "static/media/Sem título.png": "/PGI-Cuoco/static/media/Sem título.7e1868d5aa596c5fa605.png",
+    "static/media/rice_bowl.png": "/PGI-Cuoco/static/media/rice_bowl.769e3d1d958634540af4.png",
+    "index.html": "/PGI-Cuoco/index.html",
+    "main.4e06c427.css.map": "/PGI-Cuoco/static/css/main.4e06c427.css.map",
+    "main.64f8b0a0.js.map": "/PGI-Cuoco/static/js/main.64f8b0a0.js.map",
+    "453.47ee7e0e.chunk.js.map": "/PGI-Cuoco/static/js/453.47ee7e0e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e06c427.css",
+    "static/js/main.64f8b0a0.js"
+  ]
+}

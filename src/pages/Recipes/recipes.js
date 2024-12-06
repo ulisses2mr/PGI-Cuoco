@@ -4,14 +4,26 @@ import Navbar from "../../components/Navbar/navbar";
 //import Button from "../../../components/Button/button";
 import "./recipes.css";
 
+
+
+const Rep = ({ x, y, img_node = logo, onClick, blur = false }) => {
+  return (
+    <div className="cardGoof" >
+      <img onClick={onClick} src={img_node} alt="Node"/>
+    </div>
+  );
+};
+
 export default function Recipes() {
-  const navigate = useNavigate();
 
   return (
     <>
       <div className="recipes">
         <Navbar></Navbar>
-        <h1>Display de Receitas como lista?</h1>
+        <div className="allReps">
+
+
+        </div>
       </div>
     </>
   );
