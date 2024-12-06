@@ -50,7 +50,7 @@ export default function HomePage() {
             </div>
 
             <div style={{ flex: "1 1 30%", textAlign: "center", padding: "10px" }}>
-              <h4 style={{ fontSize: "40px", fontWeight: "900", marginBottom: "10px" }}>Receitas Ùnicas</h4>
+              <h4 style={{ fontSize: "40px", fontWeight: "900", marginBottom: "10px" }}>Receitas Únicas</h4>
               <img src={i3} alt="Step 2" style={{ maxWidth: "25rem", height: "auto"}} />
               <p style={{ fontSize: "22px", fontWeight: "600" , textDecoration:"none"}}>
                 Prepara pratos ajustados às tuas necessidades
