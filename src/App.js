@@ -21,10 +21,25 @@ function PageViewTracker() {
       hitType: "pageview",
       page: location.pathname + location.search,
     });
-  }, [location]);
+
+    // Set up the interval to track 'time_on_page' every 15 seconds
+    const intervalId = setInterval(() => {
+      // Sending a custom event to Google Analytics
+      gtag('event', 'time_on_page', {
+        event_category: 'engagement',
+        event_label: 'active',
+      });
+    }, 15000); // 15 seconds
+
+    // Clean up interval when component unmounts or location changes
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [location]); // Re-run when location changes
 
   return null; // This component doesn't render anything
 }
+
 
 function App() {
   return (
