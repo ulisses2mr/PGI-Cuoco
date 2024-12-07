@@ -1,17 +1,27 @@
 import Navbar from "../../components/Navbar/navbar";
 import Button from "../../components/Button2/button2";
-import Button2 from "../../components/Button/button";
 import logo  from "../../assets/logo.png";
 import i1 from "../../assets/lettuce.jpg";
 import i2 from "../../assets/bife.png";
 import i3 from "../../assets/arrroz.png";
 import logoText from "../../assets/Group(3).png";
 import "./homepage.css";
+import ReactGA from 'react-ga4';
 
 import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
   const navigate = useNavigate();
+  
+
+  const handleClick = () => {
+    ReactGA.event({
+      category: 'User',
+      action: 'Clicked on button Começa a aprender',
+      label: 'Cool Button',
+    });
+    navigate("/learn");
+  };
 
   return (
     <>
@@ -30,7 +40,7 @@ export default function HomePage() {
               <p style={{fontWeight:"700"}}><span className="warn">AVISO:</span> Cozinhar pode ser viciante com o Cuoco!</p> 
             </text>
             <div className="buttonContainer">
-              <Button click={() => navigate("/learn")} text={"Começa a aprender"} />
+              <Button click={handleClick} text={"Começa a aprender"} />
             </div>
           </div>
         </div>
