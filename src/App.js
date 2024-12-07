@@ -25,7 +25,7 @@ function PageViewTracker() {
     // Set up the interval to track 'time_on_page' every 15 seconds
     const intervalId = setInterval(() => {
       // Sending a custom event to Google Analytics
-      gtag('event', 'time_on_page', {
+      window.gtag('event', 'time_on_page', {
         event_category: 'engagement',
         event_label: 'active',
       });

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PGI-Cuoco/static/css/main.42215f0d.css",
-    "main.js": "/PGI-Cuoco/static/js/main.d70c6c29.js",
+    "main.js": "/PGI-Cuoco/static/js/main.05b83007.js",
     "static/js/453.47ee7e0e.chunk.js": "/PGI-Cuoco/static/js/453.47ee7e0e.chunk.js",
     "static/media/lettuce.jpg": "/PGI-Cuoco/static/media/lettuce.79cbd8585738a3a9a295.jpg",
     "static/media/logo.png": "/PGI-Cuoco/static/media/logo.02ba0705a443843d2cb9.png",
@@ -16,11 +16,11 @@
     "static/media/rice_bowl.png": "/PGI-Cuoco/static/media/rice_bowl.769e3d1d958634540af4.png",
     "index.html": "/PGI-Cuoco/index.html",
     "main.42215f0d.css.map": "/PGI-Cuoco/static/css/main.42215f0d.css.map",
-    "main.d70c6c29.js.map": "/PGI-Cuoco/static/js/main.d70c6c29.js.map",
+    "main.05b83007.js.map": "/PGI-Cuoco/static/js/main.05b83007.js.map",
     "453.47ee7e0e.chunk.js.map": "/PGI-Cuoco/static/js/453.47ee7e0e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.42215f0d.css",
-    "static/js/main.d70c6c29.js"
+    "static/js/main.05b83007.js"
   ]
 }
